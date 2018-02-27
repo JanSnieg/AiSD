@@ -9,17 +9,6 @@
 #include <iostream>
 #include <cmath>
 
-std::vector<int> convertToBinary(unsigned int n)
-{
-    std::vector<int> binarna;
-    if (n / 2 != 0) {
-        convertToBinary(n / 2);
-    }
-    binarna.push_back(n%2);
-//    std::cout << n%2 << ",";
-    return binarna;
-}
-
 int zad1Rekurencyjnie(int x, int n)
 {
     if (n==0)
@@ -30,7 +19,7 @@ int zad1Rekurencyjnie(int x, int n)
         return pow(zad1Rekurencyjnie(x, n/2),2);
 }
 
-int zad1Binarnie(int x, int n)
+int zad1(int x, int n)
 {
     int result = 1;
     while (n>0)
@@ -107,21 +96,46 @@ struct lnode
 {
     int key;
     lnode *next;
+    
+    //constructor
+    lnode(int value, lnode *l = nullptr)
+    {
+        key = value;
+        next = l;
+    }
 };
 
 int zad5(int n, lnode *l)
 {
-    int key = 0;
-    return key;
+    int _n = 1;
+    while (l != nullptr)
+    {
+        if (_n == n)
+            return l->key;
+        else
+        {
+            _n++;
+            l = l->next;
+        }
+    }
+    return 0;
 }
 
 int main(int argc, const char * argv[]) {
     std::cout << "Zad1:\t" << zad1Rekurencyjnie(2, 10) << std::endl;
-    std::cout << "Zad1:\t" << zad1Binarnie(2, 10) << std::endl;
+    std::cout << "Zad1:\t" << zad1(2, 10) << std::endl;
     std::cout << "Zad2:\t" << zad2(400, -25) << std::endl;
     double a[] = {1.,5.,7.,8.,1.,1.,4.,5.,7.,7.,7.,8.,10.,20.};
     int a_length = sizeof(a)/sizeof(a[0]);
     std::cout << "Zad3: \nLiczba mnożeń:\t" << zad3(a, a_length, 3) << "\nDlugość wielomianu:\t" << a_length << std::endl;
     std::cout << "Zad4:\t" << zad4(3, 20, 2) << std::endl;
+    
+    lnode third(3);
+    lnode second(2, &third);
+    lnode first(1, &second);
+    
+    std::cout << "Zad5:\t" << zad5(1, &first) << "\t" << zad5(2, &first)
+    << "\t" << zad5(3, &first) << "\t" << zad5(4, &first) << std::endl;
+
     return 0;
 }
