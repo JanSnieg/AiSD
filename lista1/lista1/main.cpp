@@ -19,30 +19,22 @@ int zad1Rekurencyjnie(int x, int n)
         return pow(zad1Rekurencyjnie(x, n/2),2);
 }
 
-int zad1(int x, int n)
+int zad1Iteracyjnie(int x, int n)
 {
     int result = 1;
     while (n>0)
     {
-        if (n%2 == 0)
-        {
-            n /= 2;
-            x = x*x;
-        }
-        else
-        {
-            n -= 1;
+        if (n%2 != 0)
             result *= x;
-            n /= 2;
-            x *= x;
-        }
+        n /= 2;
+        x *= x;
     }
     return result;
 }
 
 double func(double x)
 {
-    return x*x*x - x*x + 2;
+    return sin(x);
 }
 
 double zad2(double a, double b)
@@ -61,33 +53,32 @@ double zad2(double a, double b)
             b = c;
         else
             a = c;
-    } while (b-a >= 0.01);
+    } while (b-a >= 0.000000000001);
     return c;
 }
 double zad3(double a[], int n, double x)
 {
-    double result = 0;
+    double result = a[n];
     int count =0;
-    for (int i=n; i>0; i--)
+    while (n)
     {
-        result += a[i]*x;
+        result *= x + a[--n];
         count++;
     }
-    result += a[0];
-//    std::cout << "\nWynik:\t" << result << std::endl;
     return count;
 }
 
-long zad4(int k, int n, double p)
+double zad4(int k, int n, double p)
 {
 //        Dla i=0 P=1
-    long result = 1;
-    int tempresult = 1;
+    double q = 1-p;
+    double p_q = p/q;
+    double result = 0;
+    int tempresult = pow(q, n);;
     for (int i=1; i<=k; i++)
     {
-        tempresult *= n/i;
-        result += tempresult * pow(p, i) ; //* pow(q,n-1)
-        n--;
+        result += tempresult;
+        tempresult *= (p_q) * (n-i)/(i+1);
     }
     return result;
 }
@@ -122,9 +113,9 @@ int zad5(int n, lnode *l)
 }
 
 int main(int argc, const char * argv[]) {
-    std::cout << "Zad1:\t" << zad1Rekurencyjnie(2, 10) << std::endl;
-    std::cout << "Zad1:\t" << zad1(2, 10) << std::endl;
-    std::cout << "Zad2:\t" << zad2(400, -25) << std::endl;
+    std::cout << "Zad1:\t" << zad1Rekurencyjnie(2, 16) << std::endl;
+    std::cout << "Zad1:\t" << zad1Iteracyjnie(2, 16) << std::endl;
+    std::cout << "Zad2:\t" << zad2(-0.7, 0.5) << std::endl;
     double a[] = {1.,5.,7.,8.,1.,1.,4.,5.,7.,7.,7.,8.,10.,20.};
     int a_length = sizeof(a)/sizeof(a[0]);
     std::cout << "Zad3: \nLiczba mnożeń:\t" << zad3(a, a_length, 3) << "\nDlugość wielomianu:\t" << a_length << std::endl;
