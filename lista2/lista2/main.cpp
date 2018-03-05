@@ -4,26 +4,22 @@ int main ()
 {
     /*
      Zadanie 1
-     Ilość porównań przy szukaniu sposobem bisekcji to: sqrt(n)
+     Ilość porównań przy szukaniu sposobem bisekcji to: log2(n)
      
      Zadanie 2
-        a. n-1 porównań, tyle pamieci co tablica.
-        b. n porównań, n * 20 bitów
-        c. 2*sqrt(n), 2*sqrt(n) pamięci
+        a. n-1 porównań, (n+1) * 4 bity.
+        b. n porównań, 20! * 4 bity
+        c. log2(n), log2(n) * 4 bity pamięci
      
      Zadanie 3
         a. n mnożeń (a1*b1 + a2*b2 + ... an*bn)
         b. n mnożeń, n dodawań (x(x(x(x*2)-5)+4)+1)
-        c. n*n mnożeń (każdy z każdym)
+        c. n^2 mnożeń (każdy z każdym)
         d. n^3 (istnieje algorytm n^2.376)
         e. n!
      
      Zadanie 4
-     a. int temp1 = t[0];
-        for (int i=0; i < n; i++)
-            t[i] = t[n-(i+k)];
-        t[n] = temp1;
-        b.
+     
      */
     const int n = 10;
     int k = 3;
