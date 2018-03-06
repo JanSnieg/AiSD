@@ -11,6 +11,7 @@
 #include <iomanip>
 #include <cstdlib>
 #include <time.h>
+#include <fstream>
 
 int zad1Rekurencyjnie(int x, int n)
 {
@@ -164,6 +165,53 @@ void zad6(int N)
     std::cout << "Liczba porównań:\t" << count <<std::endl;
 }
 
+std::vector<int> getValues(const char* name)
+{
+    std::vector<int> wspolczynniki;
+    std::ifstream file(name);
+    if (file.good())
+    {
+        std::cout << "File opened" << std::endl;
+        std::string buffer;
+        while(std::getline(file, buffer))
+        {
+            wspolczynniki.push_back(std::atoi(buffer.c_str()));
+        }
+        file.close();
+    }
+    else
+        std::cerr << "fstream error" << std::endl;
+    return wspolczynniki;
+}
+
+void saveValues (const char* name, std::vector<int> result)
+{
+    std::ofstream file(name);
+    for (int i=0; i<result.size(); i++)
+        file << std::to_string(result[i]) << std::endl;
+    file.close();
+}
+
+void zad7 (std::vector<int> (*getValues) (const char* name), void (*saveValues)(const char *name, std::vector<int> result))
+{
+    std::vector<int> first = getValues("/Users/jansnieg/Documents/ISSP6/AiSD/lista2/lista2/a.txt");
+    std::vector<int> second = getValues("/Users/jansnieg/Documents/ISSP6/AiSD/lista2/lista2/b.txt");
+    std::vector<int> result;
+    if(first.size() == second.size())
+    {
+        for (int i=0; i <first.size(); i++)
+        {
+            int tempResult = 0;
+            for (int j=0; j<second.size(); j++)
+                tempResult += first[i] * second[j];
+            result.push_back(tempResult);
+        }
+    }
+    else
+        std::cerr << "Sizes not equal error" << std::endl;
+    saveValues("/Users/jansnieg/Documents/ISSP6/AiSD/lista2/lista2/c.txt", result);
+}
+
 int main(int argc, const char * argv[]) {
 //    std::cout << "Zad1:\t" << zad1Rekurencyjnie(2, 16) << std::endl;
 //    std::cout << "Zad1:\t" << zad1Iteracyjnie(2, 16) << std::endl;
@@ -179,7 +227,8 @@ int main(int argc, const char * argv[]) {
     
 //    std::cout << "Zad5:\t" << zad5(1, &first) << "\t" << zad5(2, &first)
 //    << "\t" << zad5(3, &first) << "\t" << zad5(4, &first) << std::endl;
-    zad6(15);
+//    zad6(15);
+    zad7(getValues, saveValues);
 
     return 0;
 }
