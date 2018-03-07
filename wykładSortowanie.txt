@@ -1,0 +1,34 @@
+void inSort (double t[], int n)
+{
+	for(int I=1; I<n; I++)
+		insert(t,i,t[I]);
+}
+
+Void insert (double t[], int n, double x)
+{
+	while(I && t[i] > x)
+	{
+		t[I] = t[i-1];
+		I--;
+	}
+//Od 1 do n porównań
+//O(n^2)
+}
+
+Std::numeric_limit<doubbe>	<-- wartownik (sentilnel)
+
+//Z wartownikiem
+int I=1;
+While (I<n && t[I] < x)
+{
+	t[I-1] = t[I];
+	I++;
+}
+t[I] = x;
+
+
+//NA WSKAŹNIKACH
+Insort (T *p, T *k)	//p -> pierwszy, k -> ostatni
+{
+	insert(p, k-p);
+}
