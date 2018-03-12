@@ -1,4 +1,9 @@
 #include <iostream>
+#include "zad4.h"
+#include "zad5.h"
+#include "zad6.h"
+#include "zad7.h"
+#include "zad8.h"
 
 int main ()
 {
@@ -17,33 +22,13 @@ int main ()
         c. n^2 mnożeń (każdy z każdym)
         d. n^3 (istnieje algorytm n^2.376)
         e. n!
-     
-     Zadanie 4
-     
      */
-    const int n = 10;
-    int k = 3;
-    int t[n] = {};
-    std::cout << "Normal array:\n";
-    for (int i=0; i<n; i++)
-    {
-        t[i] = i;
-        std::cout << t[i] << ",";
-    }
-    int temp1 = t[k];
-    std::cout << "\nChanged array:\n";
-    int i = k;
-    do
-    {
-        if (i == n-k)
-            i = 1;
-        t[i] = t[(n - k) + i];
-        std::cout << t[i] << ",";
-        i++;
-    } while(i <= n-k-1);
-    t[n-1] = temp1;
-    std::cout<<std::endl;
     
+    zadanie4();
+//    zadanie5();
+//    zadanie6();
+//    zadanie7(10);
+//    zadanie8();
     return 0;
 }
 

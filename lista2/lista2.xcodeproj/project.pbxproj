@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C57DA790204D7CA400BA1ECF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C57DA78F204D7CA400BA1ECF /* main.cpp */; };
+		C5A11C0A2056C8E9003707A3 /* tree-2018.cc in Sources */ = {isa = PBXBuildFile; fileRef = C5A11C092056C8E9003707A3 /* tree-2018.cc */; };
+		C5A11C0C2056C987003707A3 /* zad5.h in Sources */ = {isa = PBXBuildFile; fileRef = C5A11C0B2056C987003707A3 /* zad5.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +25,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C5117A0F2057020C00738FC9 /* zad4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zad4.h; sourceTree = "<group>"; };
 		C57DA78C204D7CA400BA1ECF /* lista2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lista2; sourceTree = BUILT_PRODUCTS_DIR; };
 		C57DA78F204D7CA400BA1ECF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C5A11C092056C8E9003707A3 /* tree-2018.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "tree-2018.cc"; sourceTree = "<group>"; };
+		C5A11C0B2056C987003707A3 /* zad5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zad5.h; sourceTree = "<group>"; };
+		C5A11C0D2056CEE7003707A3 /* zad6.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zad6.h; sourceTree = "<group>"; };
+		C5A11C0E2056D685003707A3 /* zad7.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zad7.h; sourceTree = "<group>"; };
+		C5A11C0F2056DC52003707A3 /* zad8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zad8.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +65,13 @@
 		C57DA78E204D7CA400BA1ECF /* lista2 */ = {
 			isa = PBXGroup;
 			children = (
+				C5A11C092056C8E9003707A3 /* tree-2018.cc */,
 				C57DA78F204D7CA400BA1ECF /* main.cpp */,
+				C5117A0F2057020C00738FC9 /* zad4.h */,
+				C5A11C0B2056C987003707A3 /* zad5.h */,
+				C5A11C0D2056CEE7003707A3 /* zad6.h */,
+				C5A11C0E2056D685003707A3 /* zad7.h */,
+				C5A11C0F2056DC52003707A3 /* zad8.h */,
 			);
 			path = lista2;
 			sourceTree = "<group>";
@@ -119,7 +133,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5A11C0A2056C8E9003707A3 /* tree-2018.cc in Sources */,
 				C57DA790204D7CA400BA1ECF /* main.cpp in Sources */,
+				C5A11C0C2056C987003707A3 /* zad5.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

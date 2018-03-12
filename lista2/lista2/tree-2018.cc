@@ -245,38 +245,38 @@ void destroy(node*&t) // usunięcie drzwa i zwolnienie pamięci
 	}
 }
 
-int main()
-{
-    node* t=NULL; // tworzymy puste drzewo BST
-    
-    // dodajemy klucze
-    
-    insert(t,3);
-    insert(t,4);
-    insert(t,1);
-    insert(t,7);
-    insert(t,-4);
-    insert(t,9);
-    insert(t,2);
-    cout<<"kolejnosc inorder :"; inorder(t);
-    cout<<endl;
-    cout<<"kolejnosc prerder :"; prerder(t);
-    cout<<endl;
-    cout<<"kolejnosc postrder:"; postorder(t);
-    cout<<endl;
-    cout<<"struktura         :"; display(t);
-    cout<<endl;
-    cout<<"Ilosc wezlow    = "<< n(t) << endl;
-    cout<<"Wysokosc drzewa = "<< h(t) << endl;
-    cout<<"min = "<< min(t)<< " max = "<< max(t) << endl;
-    cout<<"wyszukaj 9: "<< find(t,9)->x << endl;
-    cout<<"usun korzen (" << t->x << "): ";
-    remove(t,t->x); display(t);
-    cout<<endl;
-    cout<<"usun 9: ";
-    remove(t,9); display(t);
-    cout<<endl;
-    destroy(t); inorder(t);
-    cout<<endl;
-}
-
+//int main()
+//{
+//    node* t=NULL; // tworzymy puste drzewo BST
+//    
+//    // dodajemy klucze
+//    
+//    insert(t,3);
+//    insert(t,4);
+//    insert(t,1);
+//    insert(t,7);
+//    insert(t,-4);
+//    insert(t,9);
+//    insert(t,2);
+//    cout<<"kolejnosc inorder :"; inorder(t);
+//    cout<<endl;
+//    cout<<"kolejnosc prerder :"; prerder(t);
+//    cout<<endl;
+//    cout<<"kolejnosc postrder:"; postorder(t);
+//    cout<<endl;
+//    cout<<"struktura         :"; display(t);
+//    cout<<endl;
+//    cout<<"Ilosc wezlow    = "<< n(t) << endl;
+//    cout<<"Wysokosc drzewa = "<< h(t) << endl;
+//    cout<<"min = "<< min(t)<< " max = "<< max(t) << endl;
+//    cout<<"wyszukaj 9: "<< find(t,9)->x << endl;
+//    cout<<"usun korzen (" << t->x << "): ";
+//    remove(t,t->x); display(t);
+//    cout<<endl;
+//    cout<<"usun 9: ";
+//    remove(t,9); display(t);
+//    cout<<endl;
+//    destroy(t); inorder(t);
+//    cout<<endl;
+//}
+//
