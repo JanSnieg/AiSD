@@ -25,10 +25,10 @@ int main ()
      */
     
     zadanie4();
-//    zadanie5();
-//    zadanie6();
-//    zadanie7(10);
-//    zadanie8();
+    zadanie5();
+    zadanie6();
+    zadanie7(9);
+    zadanie8();
     return 0;
 }
 

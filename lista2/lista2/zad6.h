@@ -15,8 +15,8 @@ lnode* merge (lnode *L1, lnode *L2)
 {
     if (!L1)
     {
-        return L2;
         count6++;
+        return L2;
     }
     else if (!L2)
     {

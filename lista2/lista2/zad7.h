@@ -70,7 +70,7 @@ void zadanie7(int n)
     std::cout << "\n\n___ZADANIE 7___" << std::endl;
     
     nodeBST *N = nullptr;
-    for (auto i=0; i<n; i++)
+    for (auto i=1; i<=n; i++)
     {
         insertBST(N, i);
     }

@@ -36,21 +36,16 @@ void inorder(lnode *t)  // wypisanie kluczy w porządku "in order"
 void reverse(lnode *&L)
 {
     lnode *preview = NULL;
-    lnode *current = L;
+//    lnode *current = L;
     lnode *next = NULL;
-    while (current)
+    while (L)
     {
-        next = current->next;
-        current->next = preview;
-        preview = current;
-        current = next;
+        next = L->next;
+        L->next = preview;
+        preview = L;
+        L = next;
     }
     L = preview;
-}
-
-void marge(lnode *&L1, lnode *&L2)
-{
-    
 }
 
 void zadanie5()

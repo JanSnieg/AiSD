@@ -11,7 +11,7 @@
 #define zad4_h
 void zadanie4()
 {
-    std::cout << "\n\n___ZADANIE 5___" << std::endl;
+    std::cout << "\n\n___ZADANIE 4___" << std::endl;
     int n = 16; //wielkosc tablicy
     int k = 3; //ile przesuwamy w prawo
     int t[16] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
@@ -37,7 +37,7 @@ void zadanie4()
     
     for (auto i=0; i<n; i++)
     {
-        std::cout << t[i] << " " << std::endl;
+        std::cout << t[i] << " ";
     }
 }
 
