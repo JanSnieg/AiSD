@@ -4,6 +4,10 @@
 #include "zad6.h"
 #include "zad7.h"
 #include "zad8.h"
+#include "zad12.h"
+#include "zad13.h"
+#include "zad15.h"
+
 
 int main ()
 {
@@ -23,12 +27,18 @@ int main ()
         d. n^3 (istnieje algorytm n^2.376)
         e. n!
      */
+//    int n = 20; //wielkosc tablicy
+//    int k = 10; //ile przesuwamy w prawo
+//    int t[20] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
     
-    zadanie4();
-    zadanie5();
-    zadanie6();
-    zadanie7(9);
-    zadanie8();
+//    zadanie4();
+//    zadanie4_2(n, &t[n], k);
+//    zadanie5();
+//    zadanie6();
+//    zadanie7(9);
+//    zadanie8();
+    zadanie12();
+//    zadanie15();
     return 0;
 }
 

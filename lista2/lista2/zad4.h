@@ -41,5 +41,15 @@ void zadanie4()
     }
 }
 
+void zadanie4_2(int n, int a[], int k)
+{
+    std::cout << "\n\n___ZADANIE 4_2___" << std::endl;
+    int temp = a[0];
+    for (auto i=0; i<n; i++)
+        a[((i+1)*k)%n] = a[(i*k)%n];
+    a[((n-1)*k)%n] = temp;
+    for (auto i=0; i<n; i++)
+        std::cout << a[i] << " ";
+}
 
 #endif /* zad4_h */

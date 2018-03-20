@@ -33,6 +33,9 @@
 		C5A11C0D2056CEE7003707A3 /* zad6.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zad6.h; sourceTree = "<group>"; };
 		C5A11C0E2056D685003707A3 /* zad7.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zad7.h; sourceTree = "<group>"; };
 		C5A11C0F2056DC52003707A3 /* zad8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zad8.h; sourceTree = "<group>"; };
+		C5EA644720612BC8000526CB /* zad12.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zad12.h; sourceTree = "<group>"; };
+		C5EA6449206138F7000526CB /* zad13.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zad13.h; sourceTree = "<group>"; };
+		C5EA644A20613E40000526CB /* zad15.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zad15.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,9 @@
 				C5A11C0D2056CEE7003707A3 /* zad6.h */,
 				C5A11C0E2056D685003707A3 /* zad7.h */,
 				C5A11C0F2056DC52003707A3 /* zad8.h */,
+				C5EA644720612BC8000526CB /* zad12.h */,
+				C5EA6449206138F7000526CB /* zad13.h */,
+				C5EA644A20613E40000526CB /* zad15.h */,
 			);
 			path = lista2;
 			sourceTree = "<group>";

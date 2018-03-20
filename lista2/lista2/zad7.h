@@ -25,7 +25,7 @@ void insertBST(nodeBST *& t, int x) // wstawianie (nierekurencyjna)
 {
     nodeBST **t1=&t;
     while(*t1)
-        if(x<(*t1)->x)
+        if(x < (*t1)->x)
         {
             t1=&((*t1)->left);
             count++;
