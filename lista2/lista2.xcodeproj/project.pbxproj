@@ -28,6 +28,7 @@
 		C5117A0F2057020C00738FC9 /* zad4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zad4.h; sourceTree = "<group>"; };
 		C57DA78C204D7CA400BA1ECF /* lista2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lista2; sourceTree = BUILT_PRODUCTS_DIR; };
 		C57DA78F204D7CA400BA1ECF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C5A0C55E2061900300795D2A /* zad14.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zad14.h; sourceTree = "<group>"; };
 		C5A11C092056C8E9003707A3 /* tree-2018.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "tree-2018.cc"; sourceTree = "<group>"; };
 		C5A11C0B2056C987003707A3 /* zad5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zad5.h; sourceTree = "<group>"; };
 		C5A11C0D2056CEE7003707A3 /* zad6.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zad6.h; sourceTree = "<group>"; };
@@ -77,6 +78,7 @@
 				C5A11C0F2056DC52003707A3 /* zad8.h */,
 				C5EA644720612BC8000526CB /* zad12.h */,
 				C5EA6449206138F7000526CB /* zad13.h */,
+				C5A0C55E2061900300795D2A /* zad14.h */,
 				C5EA644A20613E40000526CB /* zad15.h */,
 			);
 			path = lista2;

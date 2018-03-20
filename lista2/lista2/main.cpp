@@ -6,6 +6,7 @@
 #include "zad8.h"
 #include "zad12.h"
 #include "zad13.h"
+#include "zad14.h"
 #include "zad15.h"
 
 
@@ -37,7 +38,8 @@ int main ()
 //    zadanie6();
 //    zadanie7(9);
 //    zadanie8();
-    zadanie12();
+//    zadanie12();
+    zadanie14();
 //    zadanie15();
     return 0;
 }

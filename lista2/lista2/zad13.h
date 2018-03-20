@@ -9,13 +9,13 @@
 #ifndef Header_h
 #define Header_h
 
-void inorder_do(lnode *t, void f(lnode* x))
+void inorder_do(node3 *t, void f(node3* x))
 {
     if(t)
     {
-        inorder_do(t->next, f);
+        inorder_do(t->left, f);
         f(t);
-        std::cout<<t->x<<" ";
+        inorder_do(t->right, f);
     }
 }
 
