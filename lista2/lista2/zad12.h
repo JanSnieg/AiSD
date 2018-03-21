@@ -11,7 +11,7 @@
 
 struct node3  // drzewo z wskaźnika na rodzica
 {
-    node3 (int v =0, node3 *p = nullptr) :
+    node3 (int v = 0, node3 *p = nullptr) :
     x(v), parent(p) {}
     
     int x;
@@ -103,8 +103,6 @@ void inorder3(node3 *root)
             std::cout << "Parent :" << root->parent->x << std::endl;
         inorder3(root->right);
     }
-//    else
-//        std::cout << "\nERROR: root = " << root << std::endl;
 }
 
 void zadanie12()

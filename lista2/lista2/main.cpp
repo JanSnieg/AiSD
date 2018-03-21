@@ -39,8 +39,8 @@ int main ()
 //    zadanie7(9);
 //    zadanie8();
 //    zadanie12();
-    zadanie14();
-//    zadanie15();
+//    zadanie14();
+    zadanie15();
     return 0;
 }
 
