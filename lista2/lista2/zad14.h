@@ -65,9 +65,9 @@ void zadanie14()
     inorder3(t);
     std::cout << std::endl;
     
-    inorder_do(t, f);
-    inorder3(t);
-    std::cout << std::endl;
+//    inorder_do(t, f);
+//    inorder3(t);
+//    std::cout << std::endl;
     
     inorder_do_notRec(t, f);
     inorder3(t);
