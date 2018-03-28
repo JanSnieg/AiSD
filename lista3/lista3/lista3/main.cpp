@@ -11,11 +11,14 @@
 #include <random>
 #include "insertionsort.h"
 #include "node.h"
+#include "nodeBST.h"
 #include "zadanie3.h"
 #include "zadanie4.h"
+#include "zadanie7.h"
 
 int main(int argc, const char * argv[])
 {
 //    zadanie3();
-    zadanie4();
+//    zadanie4();
+    zadanie7();
 }

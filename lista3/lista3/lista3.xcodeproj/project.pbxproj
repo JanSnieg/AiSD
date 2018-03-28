@@ -29,6 +29,8 @@
 		C5828941206A98C0003B6F14 /* zadanie3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zadanie3.h; sourceTree = "<group>"; };
 		C5828942206AACD9003B6F14 /* node.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = node.h; sourceTree = "<group>"; };
 		C5828943206ABB6D003B6F14 /* zadanie4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zadanie4.h; sourceTree = "<group>"; };
+		C59231F1206B6BC200F03424 /* zadanie7.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zadanie7.h; sourceTree = "<group>"; };
+		C59231F2206B6D6100F03424 /* nodeBST.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nodeBST.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +66,10 @@
 				C5828937206A75F1003B6F14 /* main.cpp */,
 				C582893F206A77CB003B6F14 /* insertionsort.h */,
 				C5828942206AACD9003B6F14 /* node.h */,
+				C59231F2206B6D6100F03424 /* nodeBST.h */,
 				C5828941206A98C0003B6F14 /* zadanie3.h */,
 				C5828943206ABB6D003B6F14 /* zadanie4.h */,
+				C59231F1206B6BC200F03424 /* zadanie7.h */,
 			);
 			path = lista3;
 			sourceTree = "<group>";
