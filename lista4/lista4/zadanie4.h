@@ -28,16 +28,32 @@ int partition (int n, double t[])
             return k;
     }
 }
-
-// sortowanie szybkie
-void quick_sort (int n, double t[])
+int katy(
+printf("Podaj liczbe elementow ciagu\n");
+scanf("%d",&n);
+for (i=0; i<n; i++)
 {
-    if (n > 1)
-    {
-        int k = partition (n, t);    //podziel na dwie czesci
-        quick_sort (k, t);    //posortuj lewa
-        quick_sort (n - k, t + k);    //posortuj prawa
-    }
+    printf("Podaj %d element ciagu\n", i+1);
+    scanf("%d",&c[i]);
 }
+printf("Podaj ktory element obliczyc\n");
+scanf("%d",&w);
+
+//algorytm Hoare'a
+i=0;
+j=n-1;
+n=w;
+while (i!=j)
+{
+    k=partition(c,i,j);
+    k=k-i+1;
+    if (k>=w) j=i+k-1;
+        if (k<w)
+        {
+            w-=k;
+            i+=k;
+        }
+}
+printf("%d element ciagu to %d", n, c[i]);
 
 #endif /* zadanie4_h */
