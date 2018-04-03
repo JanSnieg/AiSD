@@ -1,0 +1,23 @@
+
+Zadanie 6
+
+Wykorzystujac zmienne lokalne. Mozemy sie z łatwością zmieścić w 20 bajtach. Załóżmy, że te liczby mogą być mozliwie jak największe,
+ale muszą zmieścić się w "long int" maksymalnie, inaczej zadanie jest niewykonalne pod wzgledem ograniczonej pamieci. 
+Więc do przechowywania wyniku zastosujemy typ "long long int", który zajmuje 8 bajtów. Zmienną "suma" tworzymy przed pętlą for,
+która idzie od i = 0 do i = 1000.  i każdego odczytanego lokalnie inta(np. x) dodajemy do naszej sumy.
+
+Podsumowując mamy :
+2 x long int = 1 * 4 = 8
+1 x int (x) = 1 * 4 = 4
+1 x short int = 1 * 2 = 2
+
+Łącznie daje nam to 14 bajtów. Do dyspozycji mamy tylko 20 wiec do odczytu linii nie mozemy uzyc "std::string" bo zajmuje on 28 bajtow.
+Finalnie , musimy to zrobić na "const char*" = 4 bajty oraz użyć "std::stringstream" = 4 bajty do konwersji const char na int. Przy wykorzystaniu tego
+rowiązania mieścimy się równo w 22 bajtach. Za to jeśli uda nam sie wpisać text bezpośrednio do stringstreama oszczędzimy 4 bajty i 
+zajmie nam to wszystko 18 bajtów.
+
+Ilość dodawań to 1000, czyli tyle ile liczba przebiegów pętli na kazdy przebieg petli. Czyli mamy k dodawan dla kazdej sumy którą chcemy policzyć. ostatecznie mamy
+ (N/k) * k dodawań
+i (n/k) porównań aby wyznaczyć najwieksza sumę. 
+
+

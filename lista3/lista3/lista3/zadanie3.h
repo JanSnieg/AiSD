@@ -19,13 +19,16 @@ node insertion_sort (node *L)
         node *head = L;
         node **trail = &sorted;
         L = L->next;
-        while (!(*trail == NULL || head->value < (*trail)->value))
+        while (!(*trail == nullptr || head->value < (*trail)->value))
             trail = &(*trail)->next;
         head->next = *trail;
         *trail = head;
+        print_list(sorted);
+        std::cout << std::endl;
     }
     return *sorted;
 }
+
 
 void zadanie3()
 {
@@ -38,6 +41,7 @@ void zadanie3()
     }
     std::cout << "\nBefore sorting:\n";
     print_list(L);
+    std::cout << std::endl;
     node L_after = insertion_sort(L);
     std::cout << "\nAfter sorting:\n";
     print_list(&L_after);

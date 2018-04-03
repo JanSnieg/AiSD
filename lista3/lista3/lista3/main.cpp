@@ -14,11 +14,13 @@
 #include "nodeBST.h"
 #include "zadanie3.h"
 #include "zadanie4.h"
+#include "zadanie5.h"
 #include "zadanie7.h"
 
 int main(int argc, const char * argv[])
 {
 //    zadanie3();
 //    zadanie4();
-    zadanie7();
+    zadanie5();
+//    zadanie7();
 }

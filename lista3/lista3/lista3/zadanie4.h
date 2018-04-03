@@ -11,16 +11,17 @@
 
 node getMiddle (node *start)
 {
-    node *p1 = start;
-    node *p2 = start;
+    node *fast = start;
+    node *slow = start;
     if(start)
     {
-        while (p2 && p2->next)
+        while(fast!=nullptr && fast->next!=nullptr)
         {
-            p1 = p1->next;
-            p2 = p2->next->next;
+            fast = fast->next->next;
+            slow = slow->next;
         }
-        return *p1;
+        
+        return *slow;
     }
     else
         return *start;
