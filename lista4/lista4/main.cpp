@@ -11,11 +11,12 @@
 #include <random>
 #include "zadanie1.h"
 #include "zadanie2.h"
+#include "zadanie4.h"
 
 
 int main(int argc, const char * argv[])
 {
-    zadanie1();
+//    zadanie1();
 //    zadanie2();
     return 0;
 }

@@ -22,10 +22,11 @@ int* counting_sort(int t[], int n, int c)
         count_arr[j] += count_arr[j-1];
     
     int output_arr[n];
-    for (int k=0; t[k]/divider; ++k)
+    for (int k=n-1; k>=0; k--)
     {
-        output_arr[count_arr[t[k]/divider]-1] = t[k];
-        --count_arr[t[k]/divider];
+        int curr = t[k]/divider;
+        output_arr[count_arr[curr]-1] = t[k];
+        count_arr[curr]--;
     }
     
     for (int i = 0; i<n; i++)
