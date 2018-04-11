@@ -35,7 +35,7 @@ int kty(int n, double t[], int k)
     if (k<=L)
         return kty(L,t,k);
     else
-        return kty(n-L, t-k, k-L);
+        return kty(n-L, t+L, k-L);
 }
 
 #endif /* zadanie4_h */

@@ -1,5 +1,5 @@
 //
-//  zad5anie.h
+//  zadanie5.h
 //  lista3
 //
 //  Created by Jan Śnieg on 03/04/2018.

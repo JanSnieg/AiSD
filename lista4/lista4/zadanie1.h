@@ -15,7 +15,7 @@ int* counting_sort(int t[], int n, int c)
     int divider = pow(10,c);
     //counting elements
     for (int i=0; i<n; i++)
-        count_arr[t[i]/divider]++;
+        count_arr[(t[i]/divider)%10]++;
     
     //changing count so it will contain actual position of element in output arr
     for (int j=1; j<=10; ++j)
@@ -24,7 +24,7 @@ int* counting_sort(int t[], int n, int c)
     int output_arr[n];
     for (int k=n-1; k>=0; k--)
     {
-        int curr = t[k]/divider;
+        int curr = (t[k]/divider)%10;
         output_arr[count_arr[curr]-1] = t[k];
         count_arr[curr]--;
     }
