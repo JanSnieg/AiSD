@@ -20,12 +20,12 @@ template <class T> haszMap<T>::~haszMap()
 {
     for (int i=0; i<TABLE_SIZE; ++i)
     {
-        haszer<T> entry = htable[i];
+        haszer<T> *entry = htable[i];
         while (entry)
         {
-            haszer<T> prev = entry;
+            haszer<T> *prev = entry;
             entry = entry->next;
-            delete prev;
+            delete &prev;
         }
     }
     delete[] htable;
@@ -38,7 +38,7 @@ template <class T> int haszMap<T>::haszFunc(int key)
 
 template <class T> void haszMap<T>::insert(int key, T value)
 {
-    T hasz_value = haszFunc(key);
+    int hasz_value = haszFunc(key);
     haszer<T> *prev = nullptr;
     haszer<T> *entry = htable[hasz_value];
     while (entry)
@@ -58,7 +58,7 @@ template <class T> void haszMap<T>::insert(int key, T value)
 
 template <class T> void haszMap<T>::remove(int key)
 {
-    T hasz_value = haszFunc(key);
+    int hasz_value = haszFunc(key);
     haszer<T> *entry = htable[hasz_value];
     haszer<T> *prev = nullptr;
     if (!entry || entry->key != key)
@@ -80,17 +80,48 @@ template <class T> void haszMap<T>::remove(int key)
 template <class T> int haszMap<T>::search(int key)
 {
     bool flag = false;
-    T hasz_value = haszFunc(key);
-    haszer<T> entry = htable[hasz_value];
+    int hasz_value = haszFunc(key);
+    haszer<T> *entry = htable[hasz_value];
     while (entry)
     {
         if(entry->key == key)
         {
-            std::cout << entry->value << " ";
+            std::cout << entry->value << std::endl;
             flag = true;
+        }
+        else
+        {
+            std::cout <<"Nie ma tekiego elementu" << std::endl;
+            return -1;
         }
         entry = entry->next;
     }
     if(!flag)
         return  -1;
+    else
+        return 0;
+}
+
+void zadanie2()
+{
+    haszMap<std::string> hasz;
+    //dodawanie
+    for (auto i=0; i<1000; i++)
+    {
+        std::string value = std::to_string(i);
+        hasz.insert(i, value);
+    }
+    //usuwanie
+    for (auto i=0; i<1000; i+=5)
+    {
+        hasz.remove(i);
+    }
+    //szukanie istniejących
+    hasz.search(11);
+    hasz.search(203);
+    hasz.search(999);
+    //szukanie nieistniejących
+    hasz.search(50);
+    hasz.search(100);
+    hasz.search(1555);
 }

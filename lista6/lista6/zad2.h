@@ -41,4 +41,5 @@ public:
     int search(int key);
 };
 
+void zadanie2();
 #endif /* zad2_h */
