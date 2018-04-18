@@ -89,11 +89,6 @@ template <class T> int haszMap<T>::search(int key)
             std::cout << entry->value << std::endl;
             flag = true;
         }
-        else
-        {
-            std::cout <<"Nie ma tekiego elementu" << std::endl;
-            return -1;
-        }
         entry = entry->next;
     }
     if(!flag)
