@@ -16,13 +16,14 @@ int h(std::string s)
     unsigned int hash = 1315423911;
     for(std::size_t i = 0; i < s.length(); i++)
         hash ^= ((hash << 5) + s[i] + (hash >> 2));
-    return (hash & 0x7FFFFFFF);
+    return hash;
 }
 
 void zadanie1()
 {
-    std::string tekst = "ala ma kota";
-    std::cout << tekst << ": " << h(tekst) << std::endl;
+    std::string tekst = "Pawel";
+    int wynik = h(tekst);
+    std::cout << tekst << ": " << wynik << std::endl;
 }
 
 #endif /* zad1_h */

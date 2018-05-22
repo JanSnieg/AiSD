@@ -16,8 +16,7 @@
 
 int main(int argc, const char * argv[])
 {
-//    zadanie1();
-    zadanie2();
-//    std::cout << "value: " << t[i] << "\tkey: " << (10*k+1)%16 << std::endl;
+    zadanie1();
+//    zadanie2();
     return 0;
 }
