@@ -13,19 +13,31 @@ int main(int argc, const char * argv[]) {
     int max;
     cout << "Podaj rozmiar:\t";
     cin >> max;
+    // tworzenie szchownicy o rozmiarze max x max
     int** tab = new int*[max];
     for (int i = 0; i<max; i++)
         tab[i] = new int[max];
     
-    for (int i = 0; i<max; i++)
-        for (int j = 0; j<max; j++)
-        {
-            clearTab(tab, max);
-            cout << "\n(i, j)=\t(" << i << ", " << j << ")\n";
-            skoczek(tab, max, i, j, 1);
-        }
+    int start_x, start_y;
+    cout << "Wpisz pole startowe (x,y) (od 0 do rozmiaru ktory wpisales -1)\t";
+    cin >> start_x>> start_y;
+    
+    clearTab(tab, max);
+    cout << "\n(" << start_x << ", " << start_y << ")\n";
+    skoczek(tab, max, start_x, start_y, 1);
     
     
-    getchar();
+    cout << "Koniec!";
+    
+    // czyszczenie pamieci
+    for (int i = 0; i < max; i++) {
+        delete[] tab[i];
+    }
+    delete[] tab;
+    
+    
+    std::cin.get();
+    std::cin.get();
     return 0;
 }
+
